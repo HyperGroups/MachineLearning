@@ -1,0 +1,7 @@
+parameters {'silent': 0, 'lambda_bias': 0.4, 'objective': 'binary:logistic', 'alpha': 5.0, 'booster': 'gblinear', 'bst:eta': 0.5, 'lambda': 10.0}
+file_model model_lr
+[0]	train-rmse:0.469636	train-auc:0.5	train-error:0.301	train-logloss:0.633616	test-rmse:0.448018	test-auc:0.5	test-error:0.2	test-logloss:0.593418
+[1]	train-rmse:0.461585	train-auc:0.5	train-error:0.301	train-logloss:0.617685	test-rmse:0.428116	test-auc:0.5	test-error:0.2	test-logloss:0.55631
+[2]	train-rmse:0.459443	train-auc:0.5	train-error:0.301	train-logloss:0.613296	test-rmse:0.419751	test-auc:0.5	test-error:0.2	test-logloss:0.540508
+[3]	train-rmse:0.458884	train-auc:0.5	train-error:0.301	train-logloss:0.61212	test-rmse:0.415999	test-auc:0.5	test-error:0.2	test-logloss:0.533312
+[4]	train-rmse:0.458741	train-auc:0.5	train-error:0.301	train-logloss:0.611814	test-rmse:0.414237	test-auc:0.5	test-error:0.2	test-logloss:0.529899
