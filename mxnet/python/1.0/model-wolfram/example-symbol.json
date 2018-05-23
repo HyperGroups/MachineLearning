@@ -1,0 +1,22 @@
+{
+	"nodes":[
+		{"op":"null","name":"Input","attrs":{},"inputs":[]},
+		{"op":"null","name":"1.Weights","attrs":{},"inputs":[]},
+		{"op":"null","name":"1.Biases","attrs":{},"inputs":[]},
+		{"op":"FullyConnected","name":"1","attrs":{"num_hidden":"10","no_bias":"False"},"inputs":[[0,0,0],[1,0,0],[2,0,0]]},
+		{"op":"relu","name":"2$0","attrs":{},"inputs":[[3,0,0]]},
+		{"op":"Reshape","name":"3","attrs":{"shape":"(-1, 5, 2)"},"inputs":[[4,0,0]]},
+		{"op":"null","name":"4.Weights","attrs":{},"inputs":[]},
+		{"op":"null","name":"4.Biases","attrs":{},"inputs":[]},
+		{"op":"Reshape","name":"4$0","attrs":{"shape":"(-1, 10)"},"inputs":[[5,0,0]]},
+		{"op":"FullyConnected","name":"4$1","attrs":{"num_hidden":"3"},"inputs":[[8,0,0],[6,0,0],[7,0,0]]},
+		{"op":"identity","name":"Output","attrs":{},"inputs":[[9,0,0]]}
+	],
+	"arg_nodes":[0,1,2,6,7],
+	"heads":[
+		[10,0,0]
+	],
+	"attrs":{
+		"mxnet_version":["int",10001]
+	}
+}
