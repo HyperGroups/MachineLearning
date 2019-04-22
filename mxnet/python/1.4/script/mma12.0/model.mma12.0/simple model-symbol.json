@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"op":"null","name":"Input","inputs":[]},
+		{"op":"null","name":"1.Weights","inputs":[]},
+		{"op":"null","name":"1.Biases","inputs":[]},
+		{"op":"FullyConnected","name":"1","attrs":{"num_hidden":"5","no_bias":"False"},"inputs":[[0,0,0],[1,0,0],[2,0,0]]},
+		{"op":"null","name":"2.Weights","inputs":[]},
+		{"op":"null","name":"2.Biases","inputs":[]},
+		{"op":"FullyConnected","name":"2","attrs":{"num_hidden":"3","no_bias":"False"},"inputs":[[3,0,0],[4,0,0],[5,0,0]]},
+		{"op":"identity","name":"Output","inputs":[[6,0,0]]}
+	],
+	"arg_nodes":[0,1,2,4,5],
+	"heads":[[7,0,0]],
+	"attrs":{
+		"mxnet_version":["int",10400]
+	}
+}

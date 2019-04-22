@@ -1,0 +1,31 @@
+{
+	"nodes":[
+		{"op":"null","name":"Input","inputs":[]},
+		{"op":"null","name":"4.State","inputs":[]},
+		{"op":"null","name":"4.CellState","inputs":[]},
+		{"op":"null","name":"1.Weights","inputs":[]},
+		{"op":"null","name":"1.Biases","inputs":[]},
+		{"op":"FullyConnected","name":"1","attrs":{"num_hidden":"10","no_bias":"False"},"inputs":[[0,0,0],[3,0,0],[4,0,0]]},
+		{"op":"relu","name":"2$0","inputs":[[5,0,0]]},
+		{"op":"reshape","name":"3$0","attrs":{"shape":"(-1, 5, 2)"},"inputs":[[6,0,0]]},
+		{"op":"null","name":"Nodes","inputs":[]},
+		{"op":"SwapAxis","name":"4$0","attrs":{"dim1":"0","dim2":"1"},"inputs":[[7,0,0]]},
+		{"op":"expand_dims","name":"4$1","attrs":{"axis":"0"},"inputs":[[1,0,0]]},
+		{"op":"expand_dims","name":"4$2","attrs":{"axis":"0"},"inputs":[[2,0,0]]},
+		{"op":"RNN","name":"4$3","attrs":{"state_size":"5","num_layers":"1","mode":"lstm","state_outputs":"true"},"inputs":[[9,0,0],[8,0,0],[10,0,0],[11,0,0]]},
+		{"op":"SequenceLast","name":"4$4","inputs":[[12,0,0]]},
+		{"op":"squeeze","name":"4$5","attrs":{"axis":"(0)"},"inputs":[[12,2,0]]},
+		{"op":"BlockGrad","name":"4.State","inputs":[[13,0,0]]},
+		{"op":"BlockGrad","name":"4.CellState","inputs":[[14,0,0]]},
+		{"op":"null","name":"5.Weights","inputs":[]},
+		{"op":"null","name":"5.Biases","inputs":[]},
+		{"op":"SwapAxis","name":"5$0","attrs":{"dim1":"0","dim2":"1"},"inputs":[[12,0,0]]},
+		{"op":"FullyConnected","name":"5","attrs":{"num_hidden":"3","no_bias":"False"},"inputs":[[19,0,0],[17,0,0],[18,0,0]]},
+		{"op":"identity","name":"Output","inputs":[[20,0,0]]}
+	],
+	"arg_nodes":[0,1,2,3,4,8,17,18],
+	"heads":[[21,0,0],[15,0,0],[16,0,0]],
+	"attrs":{
+		"mxnet_version":["int",10400]
+	}
+}
